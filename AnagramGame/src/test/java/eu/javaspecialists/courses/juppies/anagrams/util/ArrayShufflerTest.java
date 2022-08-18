@@ -26,4 +26,23 @@ class ArrayShufflerTest {
         assertEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
                 sorted, "Not same values as before shuffle");
     }
+
+    @Test
+    public void testShuffleChars() {
+        char[] letters = "hello world".toCharArray();
+        ArrayShuffler shuffler = new ArrayShuffler();
+        shuffler.shuffle(letters);
+        String shuffle1 = new String(letters);
+
+        letters = "hello world".toCharArray();
+        shuffler.shuffle(letters);
+        String shuffle2 = new String(letters);
+
+        Arrays.sort(letters);
+        String sorted = new String(letters);
+
+        assertNotEquals("hello world", shuffle1);
+        assertNotEquals(shuffle1, shuffle2);
+        assertEquals(" dehllloorw", sorted);
+    }
 }

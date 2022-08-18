@@ -29,6 +29,8 @@ public final class WordLibraries {
     }
 
     public static WordLibrary createDefaultWordLibrary() {
-        return new ShuffledWordLibrary(new StaticWordLibrary());
+        return new RandomScrambledWordLibrary(
+                new ShuffledWordLibrary(
+                        new StaticWordLibrary()));
     }
 }
