@@ -3,7 +3,7 @@ package eu.javaspecialists.courses.juppies.anagrams.util;
 import java.lang.reflect.*;
 import java.util.*;
 
-public class ArrayShuffler {
+public final class ArrayShuffler {
     private ArrayShuffler() {
     }
 

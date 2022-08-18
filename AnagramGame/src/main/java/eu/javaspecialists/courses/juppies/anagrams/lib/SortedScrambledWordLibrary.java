@@ -2,7 +2,7 @@ package eu.javaspecialists.courses.juppies.anagrams.lib;
 
 import java.util.*;
 
-public class SortedScrambledWordLibrary extends ScrambledWordLibrary {
+public final class SortedScrambledWordLibrary extends ScrambledWordLibrary {
     public SortedScrambledWordLibrary(WordLibrary other) {
         super(other);
     }

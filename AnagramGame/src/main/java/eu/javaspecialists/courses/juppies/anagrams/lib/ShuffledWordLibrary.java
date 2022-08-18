@@ -2,7 +2,7 @@ package eu.javaspecialists.courses.juppies.anagrams.lib;
 
 import eu.javaspecialists.courses.juppies.anagrams.util.*;
 
-public class ShuffledWordLibrary implements WordLibrary {
+public final class ShuffledWordLibrary implements WordLibrary {
     private final WordLibrary other;
     private final int[] indexes;
 

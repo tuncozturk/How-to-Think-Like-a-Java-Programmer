@@ -3,7 +3,7 @@ package eu.javaspecialists.courses.juppies.anagrams.lib;
 public abstract class ScrambledWordLibrary implements WordLibrary {
     private final WordLibrary other;
 
-    public ScrambledWordLibrary(WordLibrary other) {
+    protected ScrambledWordLibrary(WordLibrary other) {
         this.other = other;
     }
 

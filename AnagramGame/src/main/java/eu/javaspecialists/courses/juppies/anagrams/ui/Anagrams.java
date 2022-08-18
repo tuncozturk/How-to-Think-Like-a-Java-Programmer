@@ -26,7 +26,7 @@ import eu.javaspecialists.courses.juppies.anagrams.lib.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Anagrams extends JFrame {
+public final class Anagrams extends JFrame {
     private JPanel contentPane;
     private JButton guess;
     private JButton newWord;

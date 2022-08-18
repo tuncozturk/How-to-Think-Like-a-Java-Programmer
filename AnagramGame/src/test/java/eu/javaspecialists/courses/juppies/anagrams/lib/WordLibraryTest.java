@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test of the functionality of {@link WordLibrary}.
  */
-public class WordLibraryTest {
+public final class WordLibraryTest {
     private static WordLibrary wordLibrary;
 
     @BeforeAll
