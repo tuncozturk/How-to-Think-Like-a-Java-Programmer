@@ -26,18 +26,25 @@ package eu.javaspecialists.courses.juppies.anagrams.lib;
  */
 public final class StaticWordLibrary extends WordLibrary {
     private static final String[] WORD_LIST = {
+            "beer", "chocolate", "coffee",
             "dolphin", "shark", "octopus", "seahorse",
             "whale", "penguin", "seal",
     };
     private static final String[] SCRAMBLED_WORD_LIST = {
+            "eebr", "checaloto", "eeffoc",
             "odplnhi", "kahrs", "cootspu", "sehosear",
             "eahlw", "epgnnui", "lsea",
     };
+
     public String getWord(int idx) {
         return WORD_LIST[idx];
     }
+
     public String getScrambledWord(int idx) {
         return SCRAMBLED_WORD_LIST[idx];
     }
-    public int getSize() { return WORD_LIST.length; }
+
+    public int getSize() {
+        return WORD_LIST.length;
+    }
 }
