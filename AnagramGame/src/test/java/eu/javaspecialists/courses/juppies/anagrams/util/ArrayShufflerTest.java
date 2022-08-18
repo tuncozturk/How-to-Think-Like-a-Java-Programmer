@@ -20,5 +20,10 @@ class ArrayShufflerTest {
                 afterShuffle, "Shuffling did not do anything");
         assertNotEquals("[4, 8, 9, 6, 3, 5, 2, 1, 7, 0]",
                 afterShuffle, "Shuffling was in a predictable sequence");
+
+        Arrays.sort(indexes);
+        String sorted = Arrays.toString(indexes);
+        assertEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+                sorted, "Not same values as before shuffle");
     }
 }

@@ -8,9 +8,9 @@ public class ArrayShuffler {
         for (int i = values.length - 1; i > 0 ; i--) {
             int swap = random.nextInt(i + 1) ;
             if (swap !=i) {
-                int tmp = values[i];
-                values[i] = values[swap];
-                values[swap] = tmp;
+                values[i] += values[swap];
+                values[swap] = values[i] - values[swap];
+                values[i] -= values[swap];
             }
         }
     }
