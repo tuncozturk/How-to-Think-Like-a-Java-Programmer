@@ -9,7 +9,6 @@ public class RandomScrambledWordLibrary extends ScrambledWordLibrary {
 
     @Override
     protected void scramble(char[] letters) {
-        ArrayShuffler shuffler = new ArrayShuffler();
-        shuffler.shuffle(letters);
+        ArrayShuffler.shuffle(letters);
     }
 }

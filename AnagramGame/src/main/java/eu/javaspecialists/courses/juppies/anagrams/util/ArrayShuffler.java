@@ -3,7 +3,8 @@ package eu.javaspecialists.courses.juppies.anagrams.util;
 import java.util.*;
 
 public class ArrayShuffler {
-    public void shuffle(int[] values) {
+    private ArrayShuffler() {}
+    public static void shuffle(int[] values) {
         Random random = new Random();
         for (int i = values.length - 1; i > 0; i--) {
             int swap = random.nextInt(i + 1);
@@ -14,7 +15,7 @@ public class ArrayShuffler {
             }
         }
     }
-    public void shuffle(char[] values) {
+    public static void shuffle(char[] values) {
         Random random = new Random();
         for (int i = values.length - 1; i > 0; i--) {
             int swap = random.nextInt(i + 1);

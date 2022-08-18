@@ -10,7 +10,6 @@ class ArrayShufflerTest {
     @Test
     public void testShuffle() {
         int[] original = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        ArrayShuffler shuffler = new ArrayShuffler();
         String originalString = Arrays.toString(original);
 
         String shuffled1;
@@ -19,7 +18,7 @@ class ArrayShufflerTest {
 
         {
             int[] indexes = original.clone();
-            shuffler.shuffle(indexes);
+            ArrayShuffler.shuffle(indexes);
             shuffled1 = Arrays.toString(indexes);
             Arrays.sort(indexes);
             sorted = Arrays.toString(indexes);
@@ -27,7 +26,7 @@ class ArrayShufflerTest {
 
         {
             int[] indexes = original.clone();
-            shuffler.shuffle(indexes);
+            ArrayShuffler.shuffle(indexes);
             shuffled2 = Arrays.toString(indexes);
         }
 
@@ -40,12 +39,11 @@ class ArrayShufflerTest {
     @Test
     public void testShuffleChars() {
         char[] letters = "hello world".toCharArray();
-        ArrayShuffler shuffler = new ArrayShuffler();
-        shuffler.shuffle(letters);
+        ArrayShuffler.shuffle(letters);
         String shuffle1 = new String(letters);
 
         letters = "hello world".toCharArray();
-        shuffler.shuffle(letters);
+        ArrayShuffler.shuffle(letters);
         String shuffle2 = new String(letters);
 
         Arrays.sort(letters);
