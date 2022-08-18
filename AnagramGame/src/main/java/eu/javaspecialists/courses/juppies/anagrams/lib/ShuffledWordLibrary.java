@@ -1,5 +1,9 @@
 package eu.javaspecialists.courses.juppies.anagrams.lib;
 
+import eu.javaspecialists.courses.juppies.anagrams.util.*;
+
+import java.util.*;
+
 public class ShuffledWordLibrary extends WordLibrary {
     private final WordLibrary other;
     private final int[] indexes;
@@ -10,7 +14,10 @@ public class ShuffledWordLibrary extends WordLibrary {
         for (int i = 0; i < indexes.length; i++) {
             indexes[i] = i;
         }
+        ArrayShuffler shuffler = new ArrayShuffler();
+        shuffler.shuffle(indexes);
     }
+
 
     @Override
     public String getWord(int idx) {
