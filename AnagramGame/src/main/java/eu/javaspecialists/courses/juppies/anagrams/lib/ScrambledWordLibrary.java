@@ -1,6 +1,7 @@
 package eu.javaspecialists.courses.juppies.anagrams.lib;
 
-public abstract class ScrambledWordLibrary implements WordLibrary {
+public abstract sealed class ScrambledWordLibrary implements WordLibrary
+        permits RandomScrambledWordLibrary, SortedScrambledWordLibrary {
     private final WordLibrary other;
 
     protected ScrambledWordLibrary(WordLibrary other) {

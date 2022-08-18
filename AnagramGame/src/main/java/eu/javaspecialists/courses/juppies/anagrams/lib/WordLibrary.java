@@ -24,7 +24,8 @@ package eu.javaspecialists.courses.juppies.anagrams.lib;
 /**
  * Word library defining logic for the Anagram Game application.
  */
-public interface WordLibrary {
+public sealed interface WordLibrary permits
+        ScrambledWordLibrary, ShuffledWordLibrary, StaticWordLibrary {
     /**
      * Gets the word at a given index.
      *
