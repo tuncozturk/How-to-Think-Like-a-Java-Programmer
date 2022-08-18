@@ -43,8 +43,8 @@ public class Anagrams extends JFrame {
         setContentPane(contentPane);
         pack();
 
-        guess.addActionListener(new GuessActionListener());
-        newWord.addActionListener(new NewWordActionListener());
+        guess.addActionListener(e -> guess());
+        newWord.addActionListener(e -> newWord());
         newWord();
     }
 
@@ -77,19 +77,5 @@ public class Anagrams extends JFrame {
             frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
-    }
-
-    private class GuessActionListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            guess();
-        }
-    }
-
-    private class NewWordActionListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            newWord();
-        }
     }
 }
