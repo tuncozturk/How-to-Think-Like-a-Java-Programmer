@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ArrayShuffler {
     public void shuffle(int[] values) {
-        Random random = new Random(42);
+        Random random = new Random();
         for (int i = values.length - 1; i > 0; i--) {
             int swap = random.nextInt(i + 1);
             if (swap != i) {
@@ -15,7 +15,7 @@ public class ArrayShuffler {
         }
     }
     public void shuffle(char[] values) {
-        Random random = new Random(42);
+        Random random = new Random();
         for (int i = values.length - 1; i > 0; i--) {
             int swap = random.nextInt(i + 1);
             if (swap != i) {

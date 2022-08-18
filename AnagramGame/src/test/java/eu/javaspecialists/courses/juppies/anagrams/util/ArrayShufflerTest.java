@@ -9,22 +9,32 @@ import static org.junit.jupiter.api.Assertions.*;
 class ArrayShufflerTest {
     @Test
     public void testShuffle() {
-        int[] indexes = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        String beforeShuffle = Arrays.toString(indexes);
-        System.out.println("before shuffle indexes = " + beforeShuffle);
-        ArrayShuffler instance = new ArrayShuffler();
-        instance.shuffle(indexes);
-        String afterShuffle = Arrays.toString(indexes);
-        System.out.println("after shuffle indexes = " + afterShuffle);
-        assertNotEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
-                afterShuffle, "Shuffling did not do anything");
-        assertNotEquals("[4, 8, 9, 6, 3, 5, 2, 1, 7, 0]",
-                afterShuffle, "Shuffling was in a predictable sequence");
+        int[] original = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        ArrayShuffler shuffler = new ArrayShuffler();
+        String originalString = Arrays.toString(original);
 
-        Arrays.sort(indexes);
-        String sorted = Arrays.toString(indexes);
-        assertEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
-                sorted, "Not same values as before shuffle");
+        String shuffled1;
+        String shuffled2;
+        String sorted;
+
+        {
+            int[] indexes = original.clone();
+            shuffler.shuffle(indexes);
+            shuffled1 = Arrays.toString(indexes);
+            Arrays.sort(indexes);
+            sorted = Arrays.toString(indexes);
+        }
+
+        {
+            int[] indexes = original.clone();
+            shuffler.shuffle(indexes);
+            shuffled2 = Arrays.toString(indexes);
+        }
+
+        assertNotEquals(shuffled1, originalString);
+        assertNotEquals(shuffled2, originalString);
+        assertNotEquals(shuffled1, shuffled2);
+        assertEquals(originalString, sorted);
     }
 
     @Test
